@@ -18,6 +18,8 @@ public class DaoProductoMySQL extends DaoMySQL<Producto> implements DaoProducto 
 	private static final String SELECT_ALL = 
 			"SELECT id_producto, nombre, id_categoria, codigo_barras, precio_venta, cantidad_stock, estado, fecha_caducidad FROM productos";
 	private static final String SELECT_BY_ID = SELECT_ALL + " WHERE id_producto = ?;";
+//	private static final String SELECT_BY_ID = "SELECT p.id_producto AS id_producto, p.nombre AS nombre, c.nombre AS nombre_categoria, p.codigo_barras AS codigo_barras, p.previo_venta AS precio_venta, p.cantidad_stock AS cantidad_stock, p.estado AS estado, p.fecha_caducidad AS fecha_caducidad FROM productos AS p JOIN categorias AS c ON p.id_categoria= c.id_categoria WHERE p.id_producto= ?;";
+
 	private static final String INSERT = "INSERT INTO productos(nombre, id_categoria, codigo_barras, precio_venta, cantidad_stock, estado, fecha_caducidad) VALUES(?,?,?,?,?,?,?);";
 	private static final String UPDATE = "UPDATE productos SET nombre=?, id_categoria=?, codigo_barras=?, precio_venta=?, cantidad_stock=?, estado=?, fecha_caducidad=? WHERE id_producto=?;";
 	private static final String DELETE = "DELETE FROM productos WHERE id_producto=?;";
