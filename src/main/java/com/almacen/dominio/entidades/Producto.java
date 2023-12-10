@@ -19,8 +19,8 @@ public class Producto {
 	private String nombre;
 	private Long idCategoria;
 	private String codigoBarras;
-	private LocalDate fechaCaducidad;
 	private BigDecimal precioVenta;
 	private Integer cantidadStock;
 	private Boolean estado;
+	private LocalDate fechaCaducidad;
 }
